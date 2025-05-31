@@ -37,7 +37,7 @@ function get_pergunta(id_pergunta) {
 function get_respostas(id_pergunta) {
   return bd.queryAll('select * from respostas where id_pergunta = ?', [id_pergunta]);
 }
-
+ 
 function get_num_respostas(id_pergunta) {
   const resultado = bd.query('select count(*) from respostas where id_pergunta = ?', [id_pergunta]);
   return resultado['count(*)'];
